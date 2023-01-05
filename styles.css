@@ -1,0 +1,303 @@
+/**{background:#e78585;}*/
+:root{
+
+    --gradiente:    
+     linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(125,46,137,1) 47%, rgba(45,60,253,1) 100%);
+}
+
+body{
+    border-radius:40px;
+}
+
+*{
+    font-family:arial;
+}
+main{
+    background:rgba(226,232,240,255);
+    width:1500px;
+    height:1000px;
+}
+
+/* grid containers*/
+
+.main-container{
+    display:grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar cards";
+}
+
+.sidebar{
+    display:grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.header{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+    "top-half top-half"
+    "bottom-half bottom-half";
+}
+
+.top-half{
+    display:grid;
+    grid-template-columns: 10% 70% 5% 5% 10%;
+}
+
+.bottom-half{
+    display:grid;
+    grid-template-columns: 10% 65% 8% 8% 8%;
+    
+}
+
+.sidebar{
+    display:grid;
+    grid-template-rows: max-content;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 6% 44% 6% 44%;
+    grid-template-areas: 
+    "h3-proj h3-announ"
+    "project-cards announcements"
+    "project-cards h3-trend"
+    "project-cards trending";
+
+
+}
+
+.project-cards{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:repeat(1fr, autofit); /*CUIDADO CON ESTO*/
+}
+
+.trending{
+    display:grid;    
+    grid-template-columns: 25% 75%;    
+}
+
+.announcements{
+    display:grid;    
+    grid-template-rows: 1fr 1fr 1fr;    
+}
+
+
+
+/* end of grid containers*/
+
+/* classes to grid-area*/
+
+
+
+.project-cards{
+    grid-area:project-cards;
+    
+}
+
+.h3-your-proj{
+    grid-area:h3-proj;
+    
+}
+.h3-announ{
+    grid-area:h3-announ;
+    
+}
+
+.announcements{
+    grid-area:announcements;
+}
+
+.trending{
+    grid-area:trending;
+}
+
+.h3-trend{
+    grid-area:h3-trend;
+    
+}
+
+.top-half{
+    grid-area:top-half;
+    
+}
+
+.bottom-half{
+    grid-area:bottom-half;
+}
+
+.header{
+    grid-area:header;
+}
+
+.sidebar{
+    background: rgb(195,34,34);
+    background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(125,46,137,1) 47%, rgba(45,60,253,1) 100%);
+    grid-area:sidebar;
+}
+
+.cards{
+    grid-area:cards
+}
+
+/* end classes to grid-area*/
+
+
+/* general elements styling*/
+
+textarea{
+    border-radius:20px;
+    background-color: #e2e8f0;
+    border: 0px solid;
+    resize:none;
+}
+
+.sidebar button{
+    
+    position: relative;
+    left:10px;
+
+}
+
+.trend1,
+.trend2,
+.trend3,
+.trend4{
+    padding-left:6%;
+}
+
+.trend1{
+    display:block;
+}
+
+.sidebar button{
+    font-size: 20px;
+    width:5em;
+    height:5em;
+    background: transparent;
+    color:white;
+    border: 0px;
+
+}
+
+.header{
+    background:white;
+    border-bottom:solid 1px #929191;
+}
+
+.top-half{
+
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button{
+    margin:10px;
+    border: 1px rgb(180, 60, 60) solid;
+    width:70px;
+    height:30px;
+    border-radius:20% / 50%;
+    background: rgb(180, 60, 60);
+    color:white;
+
+}
+
+.logged-profile{
+    justify-self: end;
+    padding-right:10px;
+}
+
+.profile-pic{
+    justify-self:center;
+    border-radius:100%;
+    height:50px;
+    width:50px;
+}
+
+.bottom-half .profile-pic{
+    justify-self: end;
+}
+
+.lupa-busqueda{
+    justify-self: end;
+}
+.trending > div > p{
+    padding-top:15px;
+    align-self: center;
+    justify-self: center;
+
+}
+
+.trending > img{
+    align-self: center;
+    justify-self: center;
+}
+
+.fonts-to-bold{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.sidebar-icons{
+    height:30px;
+    width:30px;
+    
+}
+
+/* style especial xq la imagen quedaba fea*/
+.home-icon{
+    width:40px;
+    position: relative;
+}
+
+.sidebar{
+    padding-left:30px;
+}
+
+.cards{
+    padding:20px;
+
+}
+
+.cards .card{
+    margin:10px;
+    padding:5px;
+    border-left: 10px solid red;
+    border-radius:30px;
+    background-color: white;
+
+}
+
+.announcements{
+    border:10px solid transparent;
+    background-color: white;
+
+}
+
+.trending{
+    border:10px solid transparent;
+    background-color: white;
+}
+
+.announ-card{
+    border-bottom: solid 2px black;
+}
+
+.share-fav-later{
+    height:30px;
+    width:30px;
+    justify-self: end;
+}
+
+/* end of general elements styling*/
+
+
+
